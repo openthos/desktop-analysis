@@ -22,6 +22,7 @@
 
 #2、布局文件结构
 ![image](https://github.com/openthos/desktop-analysis/blob/master/image/xml_structure.png)
+
 |文件名|说明|
 |------|----|
 |activity_background.xml|模拟壁纸所用的布局|
