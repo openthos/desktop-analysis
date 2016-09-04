@@ -125,7 +125,7 @@
 ##工程文件地址
 请查看：[OpenthosLauncher](https://github.com/openthos/desktop-analysis/tree/master/OpenthosLauncher)<br \>
 ##与Launcher3合并后工程文件地址（壁纸切换）<br \>
-需要将OpenthosLauncher工程所有的R文件改成Launcher3的R文件，并且手动融合两个版本的res文件
+需要将OpenthosLauncher工程所有的R文件改成Launcher3的R文件，并且手动融合两个版本的res文件<br \>
 请查看：[OtoLauncher](https://github.com/openthos/desktop-analysis/tree/master/OtoLauncher)<br \>
 
 
