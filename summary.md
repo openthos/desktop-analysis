@@ -119,13 +119,13 @@
 
 # 设计实现
 ##代码结构及说明
-代码的主要结构如图所示：[Desktop代码结构说明.md](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop代码结构说明.md)
+代码的主要结构如图所示：[Desktop代码结构说明.md](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop代码结构说明.md)<br \>
 ##功能设计与实现
-功能设计与实现：[Desktop设计与实现.md](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop设计与实现.md)<br>
-##构建 && 安装 && 运行
-请查看：[building.md](https://github.com/openthos/oto-filemanager/blob/master/doc/summary/building.md)<br>
-apk程序及压缩包地址：https://github.com/openthos/oto-filemanager/tree/master/app
+功能设计与实现：[Desktop设计与实现.md](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop设计与实现.md)<br \>
 ##工程文件地址
-请查看：[FileManagerOpenOS](https://github.com/openthos/desktop-analysis/OpenthosLauncher)
+请查看：[OpenthosLauncher](https://github.com/openthos/desktop-analysis/tree/master/OpenthosLauncher)<br \>
+##与Launcher3合并后工程文件地址（壁纸切换）<br \>
+需要将OpenthosLauncher工程所有的R文件改成Launcher3的R文件，并且手动融合两个版本的res文件
+请查看：[OtoLauncher](https://github.com/openthos/desktop-analysis/tree/master/OtoLauncher)<br \>
 
 
