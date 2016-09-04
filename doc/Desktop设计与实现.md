@@ -55,7 +55,9 @@
 
 右键菜单的弹出，根据点击的位置，传入不同的类型，来生成不同的菜单
 ```
-   MenuDialog dialog = new MenuDialog(item.getContext(), (Type) data.get(getAdapterPosition()).get("type"), (String) data.get(getAdapterPosition()).get("path"));
+   MenuDialog dialog = new MenuDialog(item.getContext(), 
+                                 (Type) data.get(getAdapterPosition()).get("type"), 
+                                 (String) data.get(getAdapterPosition()).get("path"));
    dialog.showDialog((int) event.getRawX(), (int) event.getRawY());
 ```
 ```
