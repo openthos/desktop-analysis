@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+import com.android.builder.core.DefaultManifestParser
+
+def getVersionName() {
+    def manifestParser = new DefaultManifestParser();
+    return manifestParser.getVersionName(file(projectDir.absolutePath + '/src/main/AndroidManifest.xml'));
+}
+
+def versionName = getVersionName()
+def apkName = "Openthos Launcher-$versionName"
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:22.+'
+
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        archivesBaseName = apkName
+        applicationId "com.openthos.launcher.openthoslauncher"
+        minSdkVersion 17
+        targetSdkVersion 22
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("th.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}

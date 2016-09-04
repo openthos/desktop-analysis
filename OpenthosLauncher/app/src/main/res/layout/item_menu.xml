@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="@dimen/dialog_menu_width"
+    android:layout_height="@dimen/dialog_menu_height"
+    android:background="@drawable/menu_item_selector"
+    >
+
+    <TextView
+        android:paddingLeft="@dimen/dialog_menu_padding"
+        android:id="@+id/text"
+        android:layout_width="@dimen/dialog_menu_width"
+        android:layout_height="@dimen/dialog_menu_height"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:textColor="@drawable/menu_text_selector"
+        android:textSize="@dimen/dialog_menu_font_size"
+        />
+
+</LinearLayout>
