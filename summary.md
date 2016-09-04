@@ -119,7 +119,7 @@
 
 # 设计实现
 ##主要结构
-代码的主要结构如图所示：[主要结构](https://github.com/openthos/oto-filemanager/blob/master/doc/summary/%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84.md)
+代码的主要结构如图所示：[主要结构](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop代码结构说明.md)
 ##应用设计与实现
 功能设计实现说明：[FileManager设计与实现.md](https://github.com/openthos/oto-filemanager/blob/master/doc/summary/FileManager%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0.md)<br>
 ##代码结构及说明
