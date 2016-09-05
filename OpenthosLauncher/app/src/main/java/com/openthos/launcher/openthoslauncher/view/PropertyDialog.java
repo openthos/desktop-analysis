@@ -20,10 +20,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
 
 /**
  * Created by xu on 2016/8/11.
@@ -38,8 +34,7 @@ public class PropertyDialog extends Dialog {
     private CheckBox limit_owner_read, limit_owner_write, limit_owner_execute;
     private CheckBox limit_group_read, limit_group_write, limit_group_execute;
     private CheckBox limit_other_read, limit_other_write, limit_other_execute;
-    TextView apply, confirm, cancel;
-
+    private TextView apply, confirm, cancel;
 
     public PropertyDialog(Context context) {
         super(context);
@@ -73,19 +68,20 @@ public class PropertyDialog extends Dialog {
         initFoot();
     }
 
-
     private void initTitle() {
         file = new File(mPath);
         titleImage = (ImageView) findViewById(R.id.title_image);
         if (file.isDirectory()) {
-            titleImage.setImageDrawable(getContext().getResources().getDrawable(R.drawable.ic_app_file));
+            titleImage.setImageDrawable(getContext().getResources()
+                    .getDrawable(R.drawable.ic_app_file));
         } else if (file.isFile()) {
-            titleImage.setImageDrawable(getContext().getResources().getDrawable(R.drawable.ic_app_text));
+            titleImage.setImageDrawable(getContext().getResources()
+                    .getDrawable(R.drawable.ic_app_text));
         }
         titleText = (TextView) findViewById(R.id.title_text);
-        titleText.setText(file.getName() + " " + getContext().getResources().getString(R.string.dialog_property_title));
+        titleText.setText(file.getName() + " "
+                + getContext().getResources().getString(R.string.dialog_property_title));
     }
-
 
     private void initBody() {
         location = (TextView) findViewById(R.id.location);
@@ -94,12 +90,14 @@ public class PropertyDialog extends Dialog {
         created = (TextView) findViewById(R.id.created);
         modified = (TextView) findViewById(R.id.modified);
         accessed = (TextView) findViewById(R.id.accessed);
+
         location.setText(file.getAbsolutePath());
         size.setText(DiskUtils.formatFileSize(file.length()));
         sizeOnDisk.setText(DiskUtils.formatFileSize(file.length()));
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+        //SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        //dateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
+        //SimpleDateFormat dateFormatLocal = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
         Process pro;
         String line = "";
@@ -111,32 +109,26 @@ public class PropertyDialog extends Dialog {
             BufferedReader in = new BufferedReader(new InputStreamReader(pro.getInputStream()));
             while ((line = in.readLine()) != null) {
                 if (line.contains("Access") && line.contains("Uid")) {
-                    String limit = line.substring(14, 24);
+                    String limit = line.substring(OtoConsts.INDEX_LIMIT_BEGIN, OtoConsts.INDEX_LIMIT_END);
                     initLimit(limit);
-                }
-                if (line.contains("Access")) {
-                    String  accessTime= line.substring(8, 27);
-                    Date dateTmp = dateFormat.parse(accessTime);
-                    accessed.setText(dateTmp.toString());
-                }
-                if (line.contains("Modify")) {
-                    String modifyTime = line.substring(8, 27);
-                    Date dateTmp = dateFormat.parse(modifyTime);
-                    modified.setText(dateTmp.toString());
-                }
-                if (line.contains("Change")) {
-                    String changeTime = line.substring(8, 27);
-                    Date dateTmp = dateFormat.parse(changeTime);
-                    created.setText(dateTmp.toString());
+                } else if (line.contains("Access")) {
+                    String accessTime = line.substring(OtoConsts.INDEX_TIME_BEGIN, OtoConsts.INDEX_TIME_END);
+                    //android.util.Log.i("wwwww","!"+accessTime+"!");
+                    //Date dateTmp = dateFormat.parse(accessTime);
+                    accessed.setText(accessTime);
+                } else if (line.contains("Modify")) {
+                    String modifyTime = line.substring(OtoConsts.INDEX_TIME_BEGIN, OtoConsts.INDEX_TIME_END);
+                    //Date dateTmp = dateFormat.parse(modifyTime);
+                    modified.setText(modifyTime);
+                } else if (line.contains("Change")) {
+                    String changeTime = line.substring(OtoConsts.INDEX_TIME_BEGIN, OtoConsts.INDEX_TIME_END);
+                    //Date dateTmp = dateFormat.parse(changeTime);
+                    created.setText(changeTime);
                 }
             }
         } catch (IOException e) {
-
-        } catch (ParseException e) {
-            e.printStackTrace();
         }
     }
-
 
     private void initLimit(String line) {
         limit_owner_read = (CheckBox) findViewById(R.id.limit_owner_read);
@@ -148,7 +140,6 @@ public class PropertyDialog extends Dialog {
         limit_other_read = (CheckBox) findViewById(R.id.limit_other_read);
         limit_other_write = (CheckBox) findViewById(R.id.limit_other_write);
         limit_other_execute = (CheckBox) findViewById(R.id.limit_other_execute);
-
         String limit;
         if (!TextUtils.isEmpty(line)) {
             limit = line.substring(0, OtoConsts.LIMIT_LENGTH);
@@ -179,7 +170,6 @@ public class PropertyDialog extends Dialog {
             if (limit.charAt(OtoConsts.LIMIT_OTHER_EXECUTE) == 'x') {
                 limit_other_execute.setChecked(true);
             }
-
         }
         limit_owner_read.setClickable(false);
         limit_owner_write.setClickable(false);
@@ -207,7 +197,6 @@ public class PropertyDialog extends Dialog {
         cancel.setOnClickListener(click);
     }
 
-
     public void showDialog() {
         show();
         Window dialogWindow = getWindow();
@@ -216,6 +205,5 @@ public class PropertyDialog extends Dialog {
         dialogWindow.setGravity(Gravity.CENTER);
         dialogWindow.setAttributes(lp);
     }
-
 
 }
