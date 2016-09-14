@@ -63,7 +63,7 @@ public class MenuDialog extends Dialog {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-      
+
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_menu);
         getWindow().setBackgroundDrawable(context.getResources().getDrawable(R.color.transparent));
@@ -253,7 +253,7 @@ public class MenuDialog extends Dialog {
                                             @Override
                                             public void run() {
                                                 super.run();
-                                                DiskUtils.moveDirectory(path, OtoConsts.RECYCLE_PATH);
+                                                DiskUtils.moveFile(path, OtoConsts.RECYCLE_PATH);
                                                 Message deleteFile = new Message();
                                                 deleteFile.obj = path;
                                                 deleteFile.what = OtoConsts.DELETE;
