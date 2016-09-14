@@ -112,6 +112,8 @@
 功能设计与实现：[Desktop设计与实现.md](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop设计与实现.md)<br \>
 ##工程文件地址
 请查看：[OpenthosLauncher](https://github.com/openthos/desktop-analysis/tree/master/OpenthosLauncher)<br \>
+如果在Linux环境下编译，可能会出现一些找不到的错误，这时候，只需要将 /main/java/Android 目录整体删除<br \>
+并在build.gradle增加   compile 'com.android.support:recyclerview-v7:22.+' <br \>
 ##与Launcher3合并后工程文件地址（壁纸切换）<br \>
 需要将OpenthosLauncher工程所有的R文件改成Launcher3的R文件，并且手动融合两个版本的res文件<br \>
 并且修改原来Launcher3的Android.mk文件中LOCAL_MODULE字段，改成其他任意字段都可以。<br \>
