@@ -49,7 +49,7 @@ public class MainActivity extends BasicActivity implements RecycleCallBack {
                 super.handleMessage(msg);
                 switch (msg.what) {
                     case OtoConsts.REFRESH:
-                        File doc = DiskUtils.getRoot();
+                        File doc = DiskUtils.getDesktop();
                         File[] files = doc.listFiles();
                         if (currentFiles.length > files.length) {
                             //删除
@@ -87,7 +87,7 @@ public class MainActivity extends BasicActivity implements RecycleCallBack {
                         inner:
                         for (int i = 0; i < mDatas.size(); i++) {
                             if ((mDatas.get(i).get("path")).equals("")) {
-                                File root = DiskUtils.getRoot();
+                                File root = DiskUtils.getDesktop();
                                 inner1:
                                 for (int j = 0; ; j++) {
                                     File file = new File(root, MainActivity.this.getResources().getString(R.string.new_folder) + j);
@@ -159,7 +159,7 @@ public class MainActivity extends BasicActivity implements RecycleCallBack {
 
     private void initDesktop() {
         int num = getNum();
-        File doc = DiskUtils.getRoot();
+        File doc = DiskUtils.getDesktop();
         if (!doc.exists()) {
             doc.mkdir();
         }
