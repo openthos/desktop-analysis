@@ -112,8 +112,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
                 public boolean onTouch(View v, MotionEvent event) {
                     if (event.getButtonState() == MotionEvent.BUTTON_SECONDARY) {
                         if (isExistMene == false) {
-                            MenuDialog dialog = new MenuDialog(itemView.getContext(),
-                                                               Type.blank, "/");
+                            MenuDialog dialog = MenuDialog.getInstance(itemView.getContext(),
+                                                                       Type.blank, "/");
                             dialog.showDialog((int) event.getRawX(), (int) event.getRawY());
                         } else {
                             isExistMene = false;
@@ -139,9 +139,16 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
         @Override
         public boolean onTouch(View v, MotionEvent event) {
             if (event.getButtonState() == MotionEvent.BUTTON_SECONDARY) {
-                MenuDialog dialog = new MenuDialog(item.getContext(),
-                                              (Type) data.get(getAdapterPosition()).get("type"),
-                                              (String)data.get(getAdapterPosition()).get("path"));
+                MenuDialog dialog = null;
+                if (Type.blank == (Type) data.get(getAdapterPosition()).get("type")) {
+                    dialog = MenuDialog.getInstance(item.getContext(),
+                             (Type) data.get(getAdapterPosition()).get("type"),
+                             (String) data.get(getAdapterPosition()).get("path"));
+                }else {
+                    dialog = new MenuDialog(item.getContext(),
+                             (Type) data.get(getAdapterPosition()).get("type"),
+                             (String) data.get(getAdapterPosition()).get("path"));
+                }
                 dialog.showDialog((int) event.getRawX(), (int) event.getRawY());
                 isExistMene = true;
             }
