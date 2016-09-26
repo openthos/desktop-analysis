@@ -37,6 +37,7 @@ public class MenuDialog extends Dialog {
     private Context context;
     private Type type;
     private String path;
+    private static MenuDialog menuDialog;
 
     public MenuDialog(Context context) {
         super(context);
@@ -58,6 +59,13 @@ public class MenuDialog extends Dialog {
     protected MenuDialog(Context context, boolean cancelable, DialogInterface.OnCancelListener cancelListener) {
         super(context, cancelable, cancelListener);
         this.context = context;
+    }
+    
+    public static MenuDialog getInstance(Context context, Type type, String path) {
+        if (menuDialog == null) {
+           menuDialog = new MenuDialog(context,type,path);
+        }
+        return menuDialog;
     }
 
     @Override
