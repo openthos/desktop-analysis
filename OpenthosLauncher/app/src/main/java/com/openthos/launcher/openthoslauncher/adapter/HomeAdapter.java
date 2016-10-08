@@ -49,6 +49,10 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
     public void setData(List<HashMap<String, Object>> data) {
         this.data = data;
     }
+    
+    public List<HashMap<String, Object>> getData() {
+        return data;
+    }
 
     @Override
     public HomeViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -102,41 +106,42 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
             item = (RelativeLayout) view.findViewById(R.id.item);
             iv = (ImageView) view.findViewById(R.id.icon);
             tv = (EditText) view.findViewById(R.id.texts);
+            tv.setClickable(true);
+            tv.setFocusable(true);
             tv.setOnKeyListener(keyListener);
             tv.setOnFocusChangeListener(focusChangeListener);
             checkBox = (CheckBox) view.findViewById(R.id.check);
             nullnull = (CheckBox) view.findViewById(R.id.nullnull);
             item.setOnTouchListener(this);
             this.mClick = click;
-            itemView.setOnTouchListener(new View.OnTouchListener() {
-                @Override
-                public boolean onTouch(View v, MotionEvent event) {
-                    if (event.getButtonState() == MotionEvent.BUTTON_SECONDARY) {
-                        if (isExistMene == false) {
-                            //MenuDialog dialog = new MenuDialog(itemView.getContext(), Type.blank, "/");
-                            MenuDialog dialog = MenuDialog.getInstance(itemView.getContext(),
-                                                                       Type.blank, "/");
-                            dialog.showDialog((int) event.getRawX(), (int) event.getRawY());
-                        } else {
-                            isExistMene = false;
-                        }
-                    }
-                    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                        if (isClicked != true && pos != -1) {
-                            data.get(pos).put("isChecked", false);
-                            pos = -1;
-                            notifyDataSetChanged();
-                        }
-                        isClicked = false;
-
-                        if (isRename == true) {
-                            isRename = false;
-                            notifyDataSetChanged();
-                        }
-                    }
-                    return false;
-                }
-            });
+            //itemView.setOnTouchListener(new View.OnTouchListener() {
+            //    @Override
+            //    public boolean onTouch(View v, MotionEvent event) {
+            //        if (event.getButtonState() == MotionEvent.BUTTON_SECONDARY) {
+            //            if (isExistMene == false) {
+            //                //MenuDialog dialog = new MenuDialog(itemView.getContext(), Type.blank, "/");
+            //                MenuDialog dialog = MenuDialog.getInstance(itemView.getContext(),
+            //                                                           Type.blank, "/");
+            //                dialog.showDialog((int) event.getRawX(), (int) event.getRawY());
+            //            } else {
+            //                isExistMene = false;
+            //            }
+            //        }
+            //        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            //            if (isClicked != true && pos != -1) {
+            //                data.get(pos).put("isChecked", false);
+            //                pos = -1;
+            //                notifyDataSetChanged();
+            //            }
+            //            isClicked = false;
+            //            if (isRename == true) {
+            //                isRename = false;
+            //                notifyDataSetChanged();
+            //            }
+            //        }
+            //        return false;
+            //    }
+            //});
         }
 
         @Override
@@ -157,45 +162,59 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
                 isExistMene = true;
             }
             if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                if ((Boolean) data.get(getAdapterPosition()).get("null") != true) {
-                    isClicked = true;
-                    if (event.getButtonState() != MotionEvent.BUTTON_SECONDARY && Math.abs(System.currentTimeMillis() - mLastClickTime) < OtoConsts.DOUBLE_CLICK_TIME && mLastClickId == getAdapterPosition()) {
-                        //双击
-                        PackageManager packageManager = item.getContext().getPackageManager();
-                        Intent intent = packageManager.getLaunchIntentForPackage(OtoConsts.FILEMANAGER_PACKAGE);
-                        item.getContext().startActivity(intent);
+                if (getAdapterPosition() != -1){
+                    if (!(Boolean) data.get(getAdapterPosition()).get("null")) {
+                        isClicked = true;
+                        if ((Math.abs(System.currentTimeMillis() - mLastClickTime)
+                                     < OtoConsts.DOUBLE_CLICK_TIME)
+                                     && (mLastClickId == getAdapterPosition())
+                                     && (event.getButtonState() != MotionEvent.BUTTON_SECONDARY)) {
+                            PackageManager packageManager = item.getContext().getPackageManager();
+                            Intent intent = packageManager.getLaunchIntentForPackage(
+                                                                     OtoConsts.FILEMANAGER_PACKAGE);
+                            item.getContext().startActivity(intent);
+                        } else {
+                            if (null != mClick) {
+                                mClick.itemOnClick(getAdapterPosition(), v);
+                                }
+                                //修改数据值
+                               if (!(Boolean)data.get(getAdapterPosition()).get("isChecked")) {
+                                if (pos != -1 && pos != getAdapterPosition()
+                                    && (Boolean) data.get(pos).get("isChecked")) {
+                                    data.get(pos).put("isChecked", false);
+                                }
+                                data.get(getAdapterPosition()).put("isChecked",true);
+                                if (pos != getAdapterPosition()) {
+                                    pos = getAdapterPosition();
+                                } else {
+                                    pos = -1;
+                                }
+                                notifyDataSetChanged();
+                             }
+                            mLastClickTime = System.currentTimeMillis();
+                            mLastClickId = pos;
+                        }
                     } else {
-                        //暂时无用
-                        if (null != mClick) {
-                            mClick.itemOnClick(getAdapterPosition(), v);
-                        }
-                        //左键 单击/拖动 选择逻辑
-                        if ((Boolean) data.get(getAdapterPosition()).get("isChecked") == false) {
-                            //判断之前点击的icon
-                            if (pos != -1 && pos != getAdapterPosition() && (Boolean) data.get(pos).get("isChecked") == true) {
-                                data.get(pos).put("isChecked", false);
-                            }
-                            //修改数据值
-                            data.get(getAdapterPosition()).put("isChecked", true);
-                            if (pos != getAdapterPosition()) {
-                                pos = getAdapterPosition();
-                            } else {
-                                pos = -1;
-                            }
+                        if (pos != -1 && pos != getAdapterPosition()
+                               && (Boolean) data.get(pos).get("isChecked")) {
+                            data.get(pos).put("isChecked", false);
+                            pos = -1;
                             notifyDataSetChanged();
+                            }
+                            mLastClickTime = System.currentTimeMillis();
+                            mLastClickId = pos;
                         }
-                        mLastClickTime = System.currentTimeMillis();
-                        mLastClickId = pos;
                     }
+                } else if ((Boolean) data.get(getAdapterPosition()).get("null") == true) {
+                    if (pos != -1 && pos != getAdapterPosition() && (Boolean) data.get(pos).get("isChecked") == true) {
+                        data.get(pos).put("isChecked", false);
+                    }
+                    pos = -1;
+                    notifyDataSetChanged();
                 }
-            } else if ((Boolean) data.get(getAdapterPosition()).get("null") == true) {
-                if (pos != -1 && pos != getAdapterPosition() && (Boolean) data.get(pos).get("isChecked") == true) {
-                    data.get(pos).put("isChecked", false);
-                }
-                pos = -1;
-                notifyDataSetChanged();
             }
-            return false;
+            //return false;
+            return true;
         }
     }
 
