@@ -178,19 +178,19 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
                                 mClick.itemOnClick(getAdapterPosition(), v);
                                 }
                                 //修改数据值
-                               if (!(Boolean)data.get(getAdapterPosition()).get("isChecked")) {
-                                if (pos != -1 && pos != getAdapterPosition()
-                                    && (Boolean) data.get(pos).get("isChecked")) {
-                                    data.get(pos).put("isChecked", false);
+                                if (!(Boolean)data.get(getAdapterPosition()).get("isChecked")) {
+                                    if (pos != -1 && pos != getAdapterPosition()
+                                        && (Boolean) data.get(pos).get("isChecked")) {
+                                        data.get(pos).put("isChecked", false);
+                                    }
+                                    data.get(getAdapterPosition()).put("isChecked",true);
+                                    if (pos != getAdapterPosition()) {
+                                        pos = getAdapterPosition();
+                                    } else {
+                                        pos = -1;
+                                    }
+                                    notifyDataSetChanged();
                                 }
-                                data.get(getAdapterPosition()).put("isChecked",true);
-                                if (pos != getAdapterPosition()) {
-                                    pos = getAdapterPosition();
-                                } else {
-                                    pos = -1;
-                                }
-                                notifyDataSetChanged();
-                             }
                             mLastClickTime = System.currentTimeMillis();
                             mLastClickId = pos;
                         }
@@ -200,17 +200,8 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
                             data.get(pos).put("isChecked", false);
                             pos = -1;
                             notifyDataSetChanged();
-                            }
-                            mLastClickTime = System.currentTimeMillis();
-                            mLastClickId = pos;
                         }
                     }
-                } else if ((Boolean) data.get(getAdapterPosition()).get("null") == true) {
-                    if (pos != -1 && pos != getAdapterPosition() && (Boolean) data.get(pos).get("isChecked") == true) {
-                        data.get(pos).put("isChecked", false);
-                    }
-                    pos = -1;
-                    notifyDataSetChanged();
                 }
             }
             //return false;
