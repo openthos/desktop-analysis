@@ -38,7 +38,6 @@ public class MainActivity extends BasicActivity implements RecycleCallBack {
     public static Handler mHandler;
     private File[] currentFiles;
     private int mHeightNum = OtoConsts.MAX_LINE;
-    private boolean mIsExistMene = false;
     private boolean mIsClicked = false;
     private boolean mIsRename = false;
 
@@ -230,16 +229,16 @@ public class MainActivity extends BasicActivity implements RecycleCallBack {
 
             @Override
             public boolean onTouch(View view, MotionEvent event) {
-                if (event.getButtonState() == MotionEvent.BUTTON_SECONDARY) {
-                    if (!mIsExistMene) {
-                        MenuDialog dialog = MenuDialog.getInstance(MainActivity.this,
-                                                                   Type.blank, "/");
-                        dialog.showDialog((int) event.getRawX(), (int) event.getRawY());
-                    } else {
-                        mIsExistMene = false;
-                    }
-                }
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    if (event.getButtonState() == MotionEvent.BUTTON_SECONDARY) {
+                        if (!MenuDialog.isExistMenu()) {
+                            MenuDialog dialog = MenuDialog.getInstance(MainActivity.this,
+                                                                       Type.blank, "/");
+                            dialog.showDialog((int) event.getRawX(), (int) event.getRawY());
+                        } else {
+                            MenuDialog.setExistMenu(false);
+                        }
+                    }
                     if (!mIsClicked && mAdapter.pos != -1) {
                         mAdapter.getData().get(mAdapter.pos).put("isChecked", false);
                         mAdapter.pos = -1;
@@ -259,16 +258,17 @@ public class MainActivity extends BasicActivity implements RecycleCallBack {
             
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                if (event.getButtonState() == MotionEvent.BUTTON_SECONDARY) {
-                    if (!mIsExistMene) {
-                        MenuDialog dialog = MenuDialog.getInstance(MainActivity.this,
-                                                                   Type.blank, "/");
-                        dialog.showDialog((int) event.getRawX(), (int) event.getRawY());
-                    } else {
-                       mIsExistMene = false;
-                    }
-                }
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    if (event.getButtonState() == MotionEvent.BUTTON_SECONDARY) {
+                        if (!MenuDialog.isExistMenu()) {
+                            MenuDialog dialog = MenuDialog.getInstance(MainActivity.this,
+                                                                       Type.blank, "/");
+                            dialog.showDialog((int) event.getRawX(), (int) event.getRawY());
+                        } else {
+                           MenuDialog.setExistMenu(false);
+                        }
+                    }
+                
                     if (!mIsClicked && mAdapter.pos != -1) {
                         mDatas.get(mAdapter.pos).put("isChecked", false);
                         mAdapter.pos = -1;
