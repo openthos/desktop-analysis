@@ -39,6 +39,7 @@ public class MenuDialog extends Dialog {
     private String path;
     private int dialogHeight;
     private static MenuDialog menuDialog;
+    private static boolean existMenu;
 
     public MenuDialog(Context context) {
         super(context);
@@ -68,6 +69,15 @@ public class MenuDialog extends Dialog {
         }
         return menuDialog;
     }
+    
+    public static void setExistMenu(boolean exist) {
+        existMenu = exist;
+    }
+  
+    public static Boolean isExistMenu() {
+        return existMenu;
+    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
