@@ -78,7 +78,6 @@ public class MenuDialog extends Dialog {
         return existMenu;
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
