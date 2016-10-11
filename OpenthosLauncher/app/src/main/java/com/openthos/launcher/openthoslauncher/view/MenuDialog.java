@@ -239,6 +239,7 @@ public class MenuDialog extends Dialog {
                         getContext().startActivity(openFile);
                         break;
                 }
+                HomeAdapter.openAppBroadcast(context);
             } else if (text.equals(all_menu[OtoConsts.INDEX_ABOUT_COMPUTER])) {
                 //about_computer
                 PackageManager packageManager = getContext().getPackageManager();
