@@ -13,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.content.Context;
 
 import com.openthos.launcher.openthoslauncher.R;
 import com.openthos.launcher.openthoslauncher.activity.MainActivity;
@@ -39,6 +40,7 @@ public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder
     private long mLastClickTime = 0;
     private boolean isClicked = false;
     public boolean isRename = false;
+    public static final String ACTION_OPEN_APPLICATION = "android.intent.action.OPEN_APPLICATION";
 
     public HomeAdapter(List<HashMap<String, Object>> data, RecycleCallBack click) {
         this.data = data;
