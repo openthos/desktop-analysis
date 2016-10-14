@@ -11,6 +11,7 @@ import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.view.KeyEvent;
 
 import com.android.launcher3.Launcher;
 import com.android.launcher3.R;
@@ -310,5 +311,15 @@ public class MainActivity extends Launcher implements RecycleCallBack {
                 }
             }
         }
+    }
+                 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (event.isCtrlPressed()) {
+            if (keyCode == KeyEvent.KEYCODE_ESCAPE || keyCode == KeyEvent.KEYCODE_MENU) {
+                return true;
+            }
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }
