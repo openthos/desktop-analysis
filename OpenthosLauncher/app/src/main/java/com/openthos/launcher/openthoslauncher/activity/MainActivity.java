@@ -318,4 +318,14 @@ public class MainActivity extends BasicActivity implements RecycleCallBack {
             }
         }
     }
+    
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (event.isCtrlPressed()) {
+            //if (keyCode == KeyEvent.KEYCODE_ESCAPE || keyCode == KeyEvent.KEYCODE_MENU) {
+                return true;
+            //}
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }
