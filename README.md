@@ -8,3 +8,9 @@
 
 ###项目介绍
 [点我~](https://github.com/openthos/desktop-analysis/blob/master/summary.md)<br \>
+
+#分项目 FileManager
+[点我~](https://github.com/openthos/oto-filemanager-analysis)<br \>
+
+#分项目 AppStore
+[点我~](https://github.com/openthos/appstore-ota-analysis)<br \>
