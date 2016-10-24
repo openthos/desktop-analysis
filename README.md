@@ -9,8 +9,12 @@
 ###项目介绍
 [点我~](https://github.com/openthos/desktop-analysis/blob/master/summary.md)<br \>
 
-#分项目 FileManager
+# 分项目 FileManager
+# 项目简介
+本项目属于openthos项目的一部分，提供电脑版的资源管理器。
 [点我~](https://github.com/openthos/oto-filemanager-analysis)<br \>
 
-#分项目 AppStore
+# 分项目 AppStore
+# 项目简介
+本项目属于openthos项目的一部分，提供定制化的应用商店。
 [点我~](https://github.com/openthos/appstore-ota-analysis)<br \>
