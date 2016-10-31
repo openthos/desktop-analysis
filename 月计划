@@ -1,7 +1,7 @@
 11月
 |成员|任务|
 |----|----|
-|王之旭|Desktop 完结，将90％的Bug 处理掉，且完成与FileManager的交互|
+|王之旭|Desktop 完结，将90％的Bug 处理掉，且完成与FileManager的交互<br />禅道上建立两个项目 filemanager（seafile实现可利用 chroot）,appstore，并且将任务添加进去。独立管理|
 |陈鹏|11月25日之前完成FileManager的修改与编写，达到可用，可交付|
 |罗俊欢|11月25日之前完成AppStore的修改与编写，达到可用，可交付|
 |卢宁|11月25日之前完成FileManager的修改与编写，达到可用，可交付|
