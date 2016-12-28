@@ -12,13 +12,13 @@
         1.图库
             显示: 可正常显示
             多个图片快速浏览 :不支持
-            - ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/gallery.png)
+     - ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/gallery.png)
           
            
          2.快图浏览
             显示 :可正常显示
             多个图片快速浏览 ：支持鼠标滚轮和键盘方向键快速浏览
-            - ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/quickpick.png)
+          - ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/quickpick.png)
             
             
 -**文档**
