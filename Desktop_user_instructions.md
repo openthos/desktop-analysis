@@ -1,64 +1,26 @@
 # 桌面说明书
+## 基本组成：
+- 桌面背景:
+
+- 桌面图标
+    - 图标是是具有可操作性的图形标识符号，根据不同的的项目，分为不同的类型，Openthos中主要分为五类，每一类都有独自的选项菜单（右键触发）
+        - ![我的电脑](https://github.com/openthos/desktop-analysis/blob/master/instructions/computer_info.md)
+        - ![回收站](https://github.com/openthos/desktop-analysis/blob/master/instructions/recycle_info.md)
+        - ![文件/文件夹](https://github.com/openthos/desktop-analysis/blob/master/instructions/file_info.md)
+        - ![空白区域](https://github.com/openthos/desktop-analysis/blob/master/instructions/blank_info.md)
+- 任务栏:
+
+## 桌面
   - 在任何界面，点击右下角可快速回到桌面
   - 在任何界面，可以Alt + Tab快速切换到桌面
   - 在任何界面，可以Win + D快速切换得到桌面
-  - 我的电脑    (左键单击反白， 左键双击打开文件管理器首页， 右键打开选项菜单)
-    - ![](https://github.com/openthos/desktop-analysis/blob/master/image/Screenshot_2016-12-28-09-37-24.png)
-    - 打开   (点击， 同双击打开)
-    - 关于本机   (点击， 打开设置首页)
 
-  - 回收站   (左键单击反白， 左键双击打开文件管理器且显示回收站， 右键打开选项菜单)
-    - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_14290-Screenshot_2016-12-28-09-37-30-1663979272.png)
-    - 打开   (点击， 同双击打开)
-    - 清空回收站   (点击， 将回收站内容全部删除)
+
+ 
     
-  - 文件夹/文件   (左键单击反白， 文件夹：左键双击打开文件管理器且显示相应的文件夹， 文件：左键双击以系统已有的应用来打开， 右键打开选项菜单)
-    - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_14290-Screenshot_2016-12-28-09-37-39-1613596689.png)
-    - 打开   (点击， 同双击打开)
-    - 打开方式    （点击， 弹出可打开该文件格式的列表弹窗）
-        - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_19917-Screenshot_2016-12-28-10-28-43262975481.png)
-    - 压缩   (点击， 弹出压缩格式选择窗口)
-        - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_19917-Screenshot_2016-12-28-09-59-48-1613596689.png)
-        - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_19917-Screenshot_2016-12-28-10-05-32-1663979272.png)
-        - 默认压缩为zip格式，文件可以压缩成zip，tar两种格式，tar可以再次压缩成tar.gz和tar.bz2格式，zip格式不允许再次压缩
-        - zip   （点击， 压缩成此格式） 
-        - tar   （点击， 压缩成此格式） 
-        - tar.gz   （点击， 压缩成此格式） 
-        - tar.bz2   （点击， 压缩成此格式） 
-        - 确定   （点击， 开始压缩） 
-        - 取消   （点击， 取消压缩） 
-    - 解压缩   (点击， 快速解压缩) ps:目前只支持直接覆盖解压缩
-    - 剪切   (点击，将该文件记录，以便之后用于粘贴，支持去文件管理器粘贴)
-    - 复制   (点击，将该文件记录，以便之后用于粘贴，支持去文件管理器粘贴)
-    - 删除   (点击， 弹出删除到回收站的弹窗)
-        - 是   （点击， 删除该文件到回收站）
-        - 否   （点击， 取消该操作）
-    - 重命名   (点击， 文件名获得焦点， 可以直接重命名， 如果不能重命名，可能是因为有应用在前台可见，需要点击右下角回到桌面或者直接win+d回到桌面后点击方可生效，按回车键确定重命名， 点击桌面其他位置则取消重命名)
-    - 属性   (点击， 弹出属性弹窗)
-        - 文件类型  （显示文件类型， 暂不支持）
-        - 打开方式  （显示打开方式， 暂不支持）
-        - 位置  （显示文件的绝对路径）
-        - 大小  （显示文件的大小）
-        - 占用空间  （显示文件的占用空间）
-        - 创建时间  （显示文件的创建时间）
-        - 修改时间  （显示文件的修改时间）
-        - 访问时间  （显示文件的访问时间）
-        - 用户权限  （显示文件的用户权限）
-        - 群组权限  （显示文件的群组权限）
-        - 其他权限  （显示文件的其他权限）
-        - 确定  （关闭该弹窗）
-        - 取消  （关闭该弹窗）
-        - 应用  （关闭该弹窗）
+ 
 
-  - 空白处  (左键反白已选中的图标， 右键打开选项菜单)
-    - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_14290-Screenshot_2016-12-28-09-38-04-885265520.png)
-    - 粘贴  (点击， 将之前剪贴或复制的内容粘贴到桌面，支持从文件管理器剪贴或复制)
-    - 排序   (点击， 将桌面图标排序)
-    - 新建文件夹   (点击， 在桌面快速新建文件夹)
-    - 显示设置   (点击， 快速打开设置--设置页面)
-        - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_19917-Screenshot_2016-12-28-10-21-05-1435394086.png)
-    - 更改壁纸   (点击， 快速打开设置--壁纸选择页面)
-        - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_19917-Screenshot_2016-12-28-10-21-111151111510.png)
+
  
   - 其他(以下功能如果没有生效，可能是因为有应用在前台可见，需要点击右下角回到桌面或者直接win+d回到桌面然后在桌面任意位置点击一下，之后的快捷键方可生效)   
     - 选中某文件后， 按Delete键可以快速呼出删除到回收站弹窗
