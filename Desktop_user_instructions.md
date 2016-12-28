@@ -4,25 +4,22 @@
 
 - 桌面图标
     - 图标是是具有可操作性的图形标识符号，根据不同的的项目，分为不同的类型，Openthos中主要分为五类，每一类都有独自的选项菜单（右键触发）
-        - ![我的电脑](https://github.com/openthos/desktop-analysis/blob/master/instructions/computer_info.md)
-        - ![回收站](https://github.com/openthos/desktop-analysis/blob/master/instructions/recycle_info.md)
+        - ![我的电脑](https://github.com/openthos/desktop-analysis/blob/master/instructions/computer_info.md) 通过我的电脑可以快速访问文件管理系统，是一个特殊的图标
+        - ![回收站](https://github.com/openthos/desktop-analysis/blob/master/instructions/recycle_info.md) 用于存放用户删除的文件或文件夹（不包括U盘），当用户删除文件或文件夹，默认不会物理删除，而是转存到回收站统一管理。
         - ![文件/文件夹](https://github.com/openthos/desktop-analysis/blob/master/instructions/file_info.md)
         - ![空白区域](https://github.com/openthos/desktop-analysis/blob/master/instructions/blank_info.md)
+    - 图标的基本操作
+        - 移动
+        - 打开
+        - 更名
+        - 删除
+        - 排列
 - 任务栏:
-
-## 桌面
+## 快速回到桌面
   - 在任何界面，点击右下角可快速回到桌面
   - 在任何界面，可以Alt + Tab快速切换到桌面
   - 在任何界面，可以Win + D快速切换得到桌面
-
-
- 
-    
- 
-
-
- 
-  - 其他(以下功能如果没有生效，可能是因为有应用在前台可见，需要点击右下角回到桌面或者直接win+d回到桌面然后在桌面任意位置点击一下，之后的快捷键方可生效)   
+## 常用快捷键
     - 选中某文件后， 按Delete键可以快速呼出删除到回收站弹窗
     - 选中某文件后， 按Shift + Delete键可以快速呼出直接删除的弹窗
     - 按Alt + Tab 可以快速切换打开的应用， 类似其他图形操作系统
