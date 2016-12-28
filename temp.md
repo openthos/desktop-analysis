@@ -48,8 +48,8 @@
     
         1.下载
             页面： 内容显示正常
-             - ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/download.png)
+          - ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/download.png)
             路径: 默认保存到个人空间的下载目录下
-             - ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/download_dir.png)
+           - ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/download_dir.png)
            
             
