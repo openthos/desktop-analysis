@@ -16,8 +16,8 @@
         - 删除
         - 排列
 - 任务栏和开始菜单:
-    - ![任务栏说明书]（https://github.com/openthos/systemui-analysis/blob/master/Systemui_use_instructions/TaskBar%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md）
-    - ![开始菜单说明书]（https://github.com/openthos/systemui-analysis/blob/master/Systemui_use_instructions/StartupMenu_user_instructions.md）
+    - ![任务栏说明书](https://github.com/openthos/systemui-analysis/blob/master/Systemui_use_instructions/TaskBar%20%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.md)
+    - ![开始菜单说明书](https://github.com/openthos/systemui-analysis/blob/master/Systemui_use_instructions/StartupMenu_user_instructions.md)
     
     
 ## 快速回到桌面
