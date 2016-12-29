@@ -50,7 +50,8 @@
    	 - 004 支持文件压缩信息弹窗显示
    	 - 005 支持文件解压缩信息弹窗显示
    	 - 006 支持 文件详情显示 文件位置，文件大小，占用空间，创建时间，修改时间，访问时间，用户权限，群组权限，其他权限
-
+	 
+## ![Desktop Input 同 FileManager Input](https://github.com/openthos/desktop-analysis/blob/master/instructions/FileManagerInput.md)
 ## 基本组成：
 - 桌面背景:
     - [更换壁纸](https://github.com/openthos/desktop-analysis/blob/master/instructions/change_wallpaper_info.md)
