@@ -26,11 +26,8 @@
 
      - ![寻找丢失的文件](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E5%AF%BB%E6%89%BE%E4%B8%A2%E5%A4%B1%E7%9A%84%E6%96%87%E4%BB%B6.md)
 
+     - ![文件属性](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7.md)
 
-
-将文件写入 CD 或 DVD
-
-文件属性
 
 浏览服务器或网络共享中的文件
 
