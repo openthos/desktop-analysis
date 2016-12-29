@@ -18,8 +18,7 @@
      - ![搜索文件](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6.md)
   
 
-
-搜索文件
+     - ![重命名文件或文件夹](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E9%87%8D%E5%91%BD%E5%90%8D%E6%96%87%E4%BB%B6%E6%88%96%E6%96%87%E4%BB%B6%E5%A4%B9.md)
 
 重命名文件或文件夹
 
