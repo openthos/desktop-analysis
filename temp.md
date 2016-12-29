@@ -29,11 +29,11 @@
      - ![文件属性](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7.md)
 
 
-文件管理器首选项
 
 ## 可移动驱动器和外部磁盘
+     - ![安全删除外部设备](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E5%AE%89%E5%85%A8%E5%88%A0%E9%99%A4%E5%A4%96%E9%83%A8%E8%AE%BE%E5%A4%87.md)
 
-安全删除外部设备
+
 
 弹出或卸载 USB 闪存驱动器、CD、DVD 或其他设备。
 
