@@ -14,8 +14,10 @@
 
      - ![对文件和文件夹进行排序](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E5%AF%B9%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F.md)
 
-          
-对文件和文件夹进行排序
+        
+     - ![搜索文件](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6.md)
+  
+
 
 搜索文件
 
