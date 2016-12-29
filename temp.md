@@ -29,10 +29,6 @@
      - ![文件属性](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7.md)
 
 
-浏览服务器或网络共享中的文件
-
-还原您删除的文件
-
 文件管理器首选项
 
 ## 可移动驱动器和外部磁盘
