@@ -9,6 +9,10 @@
 
 
      - ![复制或移动文件和文件夹](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E5%A4%8D%E5%88%B6%E6%88%96%E7%A7%BB%E5%8A%A8%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9.md)
+     
+     - ![对文件和文件夹进行排序](https://github.com/openthos/desktop-analysis/blob/master/instructions/%E5%AF%B9%E6%96%87%E4%BB%B6%E5%92%8C%E6%96%87%E4%BB%B6%E5%A4%B9%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F.md) 
+     
+     
 
 对文件和文件夹进行排序
 
