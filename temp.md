@@ -38,12 +38,6 @@
 弹出或卸载 USB 闪存驱动器、CD、DVD 或其他设备。
 
 
-
-
-
-
-
-
 ## FileManager input
 
 -**音乐**
