@@ -1,4 +1,4 @@
-＃ 动态壁纸
+# 动态壁纸
 
 - 右键空白区域，选择更改壁纸
     - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_3263-Screenshot_2016-12-29-10-18-51-422347183.png)
@@ -25,4 +25,5 @@
 - 点击预览页面左上角 “设置壁纸“ 即可成功更换壁纸
 
 # 浏览器直接设置
-- 打开原生浏览器
+- 打开原生浏览器，在互联网上找到自己喜欢的图片，并直接在图片上右键，将会弹出菜单，选择设为壁纸可快速直接更换壁纸
+    - ![](https://github.com/openthos/desktop-analysis/blob/master/image/tmp_3263-Screenshot_2016-12-29-10-26-421404578323.png)
