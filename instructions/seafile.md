@@ -5,6 +5,6 @@
 - 云服务右键菜单：
   ![右键菜单](https://github.com/openthos/desktop-analysis/blob/master/image/menu_folder.png)
 - 目前由于客户端的一些文件，有如下几点限制：
-  - 文件库名称不能是英文
+  - 文件库名称只能是英文
   - 真实的目录问题：如在云服务界面看到一个文件库名叫:My library，双击进入后到文件夹，真实目录在 My library/My library目录下，即需要再多进入一次。
   
