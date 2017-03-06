@@ -1,7 +1,6 @@
-## FileManager Input
+# FileManager Input
 
-- **音乐**
-
+##音乐
 - 1.音乐
   - 播放：可正常播放
   - 显示：可正常显示
@@ -11,14 +10,13 @@
   - 播放：可正常播放
   - 显示：可正常显示
   ![](https://github.com/openthos/systemui-analysis/blob/master/ImageView/cloudmusic.png) 
-- **视频**
 
+##视频
 - 1.vlc
   - 播放：可正常播放
   ![](https://github.com/openthos/systemui-analysis/blob/master/ImageView/vlc.png)
 
-- **图片**
-
+##图片
 - 1.图库
   - 显示: 可正常显示
   - 多个图片快速浏览 :不支持
@@ -28,8 +26,9 @@
   - 显示 :可正常显示
   - 多个图片快速浏览 ：支持鼠标滚轮和键盘方向键快速浏览
   ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/quickpick.png)
-- **文档**
 
+
+##文档
 - 1.WPS
   - 页面： 内容显示正常
   - 文字： 显示正常
@@ -50,8 +49,9 @@
   - 保存: 可正常保存      
   ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/textEditor.png)
 
-- **下载**
-    
+
+##下载
+    
 - 1.下载
   - 页面： 内容显示正常
   ![](https://github.com/openthos/desktop-analysis/blob/master/imageView/download.png)
