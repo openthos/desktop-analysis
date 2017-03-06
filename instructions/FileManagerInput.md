@@ -16,7 +16,7 @@
   - 播放：可正常播放
   ![](https://github.com/openthos/systemui-analysis/blob/master/ImageView/vlc.png)
 
-##图片
+##图库
 - 1.图库
   - 显示: 可正常显示
   - 多个图片快速浏览 :不支持
