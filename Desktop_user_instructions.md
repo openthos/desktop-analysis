@@ -52,6 +52,7 @@
    	 - 006 支持 文件详情显示 文件位置，文件大小，占用空间，创建时间，修改时间，访问时间，用户权限，群组权限，其他权限；	
  
 ## [Desktop Input 同 FileManager Input](https://github.com/openthos/desktop-analysis/blob/master/instructions/FileManagerInput.md)
+
 ## 基本组成：
 - 桌面背景:
     - [更换壁纸](https://github.com/openthos/desktop-analysis/blob/master/instructions/change_wallpaper_info.md)
@@ -74,17 +75,27 @@
     
 ## 快速回到桌面
   - 在任何界面，点击右下角可快速回到桌面；
+  
   - 在任何界面，可以Alt + Tab快速切换到桌面；
+  
   - 在任何界面，可以Win + D快速切换得到桌面；
   
 ## 常用快捷键（目前由于多窗口特性，可能快捷键不生效，解决办法是利用 快速回到桌面，在点击桌面，就可以生效，快速回到桌面的方法见上）
   - 选中某文件后， 按Delete键可以快速呼出删除到回收站弹窗；
+  
   - 选中某文件后， 按Shift + Delete键可以快速呼出直接删除的弹窗；
+  
   - 按Alt + Tab 可以快速切换打开的应用， 类似其他图形操作系统；
+  
   - 选中某文件后， 按Ctrl + C键可以快速复制 ；
+  
   - 选中某文件后， 按Ctrl + X键可以快速剪贴 ；
+  
   - 选中某文件后， 按F2键可以快速重命；
+  
   - 按F5键可以快速刷新桌面；
+  
   - 按Ctrl + V键可以快速进行粘贴；  
+  
   - 桌面的图标长按后拖拽可以进行位置的变换 （暂不支持直接点击拖拽）；
   
