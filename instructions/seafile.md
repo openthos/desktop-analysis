@@ -3,7 +3,7 @@
 ## 文件同步
 - 你可以创建不同的资料库来分类组织文件。每个资料库都可以有选择性地在多台设备上同步。
 
-## 云服务界面
+## 云服务
 - 在文件管理器左侧导航栏点击云服务，即可打开云服务界面
   ![主界面](https://github.com/openthos/desktop-analysis/blob/master/image/HomeUI.png)
 - 云服务界面右键菜单：
