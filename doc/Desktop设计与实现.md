@@ -1,9 +1,9 @@
-#Desktop设计与实现
+# Desktop设计与实现
 
-###整体思想
+### 整体思想
 写一个布局，背景透明覆盖到Launcher3的主界面，然后将Launcher3中不要的功能移除/隐藏。
 
-##代码相关部分
+## 代码相关部分
 类似Windows，ubuntu桌面，从左向右排列，从上向下排列，布局使用的是Android5.0新增加的RecyclerView。
 ```
    private RecyclerView mRecyclerView;
