@@ -3,10 +3,7 @@
 
 - 项目简介
 - 功能需求
-- 项目进展
 - 设计实现
-- 存在问题
-
 
 # 项目简介
 本项目属于openthos项目的一部分，提供电脑版的Launcher。
@@ -86,9 +83,10 @@
 |清空回收站|单击|清空回收站中的所有文件
 
 ### 压缩 解压缩
-     - 支持将普通文件压缩成tar，zip
-     - 支持将tar文件进一步压缩成gz，bz2
-     - 支持解压 tar，zip，rar等常见的压缩文件格式
+
+   - 支持将普通文件压缩成tar，zip
+   - 支持将tar文件进一步压缩成gz，bz2
+   - 支持解压 tar，zip，rar等常见的压缩文件格式
   
 ### 属性  
 |元素|操作|描述|
@@ -110,19 +108,19 @@
  
 # 设计实现
 ## 代码结构及说明
-代码的主要结构如图所示：[Desktop代码结构说明.md](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop代码结构说明.md) <br \>
+代码的主要结构如图所示：[Desktop代码结构说明.md](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop代码结构说明.md) <br />
 
 ## 功能设计与实现
-功能设计与实现：[Desktop设计与实现.md](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop设计与实现.md) <br \>
+功能设计与实现：[Desktop设计与实现.md](https://github.com/openthos/desktop-analysis/blob/master/doc/Desktop设计与实现.md) <br />
 
 ## 工程文件地址
-请查看：[OpenthosLauncher](https://github.com/openthos/desktop-analysis/tree/master/OpenthosLauncher) <br \>
-如果在Linux环境下编译，可能会出现一些找不到的错误，这时候，只需要将 /main/java/Android 目录整体删除 <br \>
-并在build.gradle增加   compile 'com.android.support:recyclerview-v7:22.+'  <br \>
+请查看：[OpenthosLauncher](https://github.com/openthos/desktop-analysis/tree/master/OpenthosLauncher) <br />
+如果在Linux环境下编译，可能会出现一些找不到的错误，这时候，只需要将 /main/java/Android 目录整体删除 <br />
+并在build.gradle增加   compile 'com.android.support:recyclerview-v7:22.+'  <br />
 
-## 与Launcher3合并后工程文件地址（壁纸切换）<br \>
-需要将OpenthosLauncher工程所有的R文件改成Launcher3的R文件，并且手动融合两个版本的res文件 <br \>
-并且修改原来Launcher3的Android.mk文件中LOCAL_MODULE字段，改成其他任意字段都可以。 <br \>
-请查看：[OtoLauncher](https://github.com/openthos/desktop-analysis/tree/master/OtoLauncher) <br \>
+## 与Launcher3合并后工程文件地址（壁纸切换）<br />
+需要将OpenthosLauncher工程所有的R文件改成Launcher3的R文件，并且手动融合两个版本的res文件 <br />
+并且修改原来Launcher3的Android.mk文件中LOCAL_MODULE字段，改成其他任意字段都可以。 <br />
+请查看：[OtoLauncher](https://github.com/openthos/desktop-analysis/tree/master/OtoLauncher) <br />
 
 
