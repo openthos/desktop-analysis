@@ -77,7 +77,10 @@
             case blank:
                 s = context.getResources().getStringArray(R.array.menu_blank);
                 break;
-        }
+            case MORE:
+                s = context.getResources().getStringArray(R.array.menu_more);
+                break;
+        }
         for (int i = 0; i < s.length; i++) {
             View mv = View.inflate(context, R.layout.item_menu, null);
             TextView tv = (TextView) mv.findViewById(R.id.text);
@@ -94,3 +97,46 @@
    View.OnClickListener clickListener = new View.OnClickListener() {}
    View.OnHoverListener hoverListener = new View.OnHoverListener() {}
 ```
+
+压缩解压缩的实现 7za 和 unrar 命令行
+
+   -  7za a xxx.tar -r xxx -bb3 -y 
+   -  7za a xxx.tar.gz -w xxx -bb3 -y 
+   -  7za a xxx.tar.bz2 -w xxx -bb3 -y 
+   -  7za a xxx.tar.zip -w xxx -bb3 -y 
+   -  7za x xxx.xxx -oxxx -bb3 -y 
+   -  7za l xxx.xxx 
+   -  unrar x xxx.rar -y 
+   -  unrar l xxx.xxx 
+   
+快捷键操作，主要代码在MainActivity的onKeyDown方法中
+```
+     @Override
+     public boolean onKeyDown(int keyCode, KeyEvent event) {
+         mIsCtrlPress = event.isCtrlPressed();
+         mIsShiftPress = event.isShiftPressed();
+         if (!mAdapter.isRename) {
+             return keyDealing(keyCode, event);
+         }
+         return super.onKeyDown(keyCode, event);
+     }
+```
+
+框选利用自定义view来实现
+```
+     public FrameSelectView(Context context, AttributeSet attrs) {
+         super(context, attrs);
+         mPaint= new Paint();
+         mPaint.setColor(Color.GRAY);
+         //mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+         mPaint.setAlpha(0x7f);
+         mPaint.setStrokeWidth(5.0f);
+     }
+     
+     @Override
+     protected void onDraw(Canvas canvas) {
+         super.onDraw(canvas);
+         canvas.drawRect(mLeft, mTop, mRight, mBootom,mPaint);
+     }
+```
+
