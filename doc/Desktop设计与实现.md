@@ -13,17 +13,17 @@
    StaggeredGridLayoutManager.HORIZONTAL));
 ```
 
-桌面每个图标的数据是以HashMap对象存放的，主要有如下数据，分别表示图标名，路径，是否被选中，是否是空白区域标识，图标，类型：
+桌面每个图标的数据是以IconEntity对象存放的，主要有如下数据，分别表示图标名，路径，是否被选中，是否是空白区域标识，图标，类型：
 ```
-   public List<HashMap<String, Object>> mDatas = new ArrayList<>();
-   HashMap<String, Object> map = new HashMap<>();
-   map.put("name", file.getName());
-   map.put("path", file.getAbsolutePath());
-   map.put("isChecked", false);
-   map.put("null", false);
-   map.put("icon", R.drawable.ic_app_file);
-   map.put("type", Type.directory);
-   mDatas.set(i, map);
+    public class IconEntity {
+        private String mName;
+        private String mPath;
+        private boolean mIsChecked;
+        private Drawable mIcon;
+        private int mIconRes;
+        private boolean mIsBlank;
+        private Type mType;
+    }
 ```
 
 拖动方法回调(ItemTouchHelper已封装好执行，这里只需要进行内存中数据的变换即可)
@@ -44,9 +44,7 @@
                             Collections.swap(mDatas, from + i, from + i + 1);
                         }
                     }
-                    mAdapter.setData(mDatas);
                     mAdapter.notifyItemMoved(from, to);
-                    mAdapter.pos = to;
                 }
             }
         }
